@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>বাসা খুঁজুন</title>
+    <title>বাসা সংগ্রহ</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>আপনার আশেপাশে বাসা খুঁজুন</h1>
-    </header>
+    <div class="container">
+        <h1>🏘️ আমার বাসা সংগ্রহ</h1>
+        
+        <!-- Add New House Section -->
+        <div class="form-section">
+            <h2>➕ নতুন বাসা যোগ করুন</h2>
+            <input type="text" id="house-name" placeholder="🏡 বাসার নাম লিখুন">
+            <input type="text" id="house-location" placeholder="📍 লোকেশন (অটো ফিল হবে)">
+            <button class="location-btn" onclick="getLocation()">📌 লোকেশন নিন</button>
+            <input type="text" id="house-description" placeholder="📝 বাসার বিবরণ লিখুন">
+            <input type="file" id="house-image" accept="image/*">
+            <button class="add-btn" onclick="addHouse()">➕ বাসা যোগ করুন</button>
+        </div>
+        
+        <!-- Search House Section -->
+        <div class="search-section">
+            <h2>🔍 বাসা খুঁজুন</h2>
+            <input type="text" id="location" placeholder="🔎 লোকেশন দিয়ে খুঁজুন">
+            <button class="search-btn" onclick="searchHouse()">🔍 খুঁজুন</button>
+        </div>
+        
+        <!-- Theme Toggle -->
+        <button onclick="toggleTheme()" class="theme-btn">🌙/🌞</button>
 
-    <section id="search">
-        <h2>লোকেশন দিয়ে খুঁজুন</h2>
-        <input type="text" id="location" placeholder="আপনার এলাকা লিখুন...">
-        <button onclick="searchHouse()">খুঁজুন</button>
-    </section>
-
-    <section id="add-house">
-        <h2>নতুন বাসা যোগ করুন</h2>
-        <input type="text" id="house-name" placeholder="বাসার নাম">
-        <input type="text" id="house-location" placeholder="বাসার ঠিকানা">
-        <textarea id="house-description" placeholder="বাসার বিবরণ"></textarea>
-        <button onclick="addHouse()">যোগ করুন</button>
-    </section>
-
-    <section id="house-list">
-        <h2>পাওয়া বাসাগুলো</h2>
+        <p id="message"></p>
         <ul id="houses"></ul>
-    </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
