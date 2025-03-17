@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>বাসা খুঁজুন</title>
+</head>
+
+<body>
+    <header>
+        <h1>আপনার আশেপাশে বাসা খুঁজুন</h1>
+    </header>
+
+    <section id="search">
+        <h2>লোকেশন দিয়ে খুঁজুন</h2>
+        <input type="text" id="location" placeholder="আপনার এলাকা লিখুন...">
+        <button onclick="searchHouse()">খুঁজুন</button>
+    </section>
+
+    <section id="add-house">
+        <h2>নতুন বাসা যোগ করুন</h2>
+        <input type="text" id="house-name" placeholder="বাসার নাম">
+        <input type="text" id="house-location" placeholder="বাসার ঠিকানা">
+        <textarea id="house-description" placeholder="বাসার বিবরণ"></textarea>
+        <button onclick="addHouse()">যোগ করুন</button>
+    </section>
+
+    <section id="house-list">
+        <h2>পাওয়া বাসাগুলো</h2>
+        <ul id="houses"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
